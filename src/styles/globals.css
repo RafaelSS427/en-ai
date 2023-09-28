@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg-size: 400%;
+}
+
+.text-gradient {
+    --color-one: #9E00FF;
+    --color-two: #2EB9DF;
+    background: linear-gradient(90deg,
+            var(--color-one),
+            var(--color-two),
+            var(--color-one)) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: move-bg 8s infinite linear;
+}
+
+@keyframes move-bg {
+    to {
+        background-position: var(--bg-size) 0;
+    }
+}
+
+.dark {
+    background: #111;
+}
+
+#ellipsis {
+    animation: path 1.5s infinite;
+}
+
+@keyframes path {
+    0% {
+        d: path('M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z')
+    }
+
+    50% {
+        d: path('M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z')
+    }
+
+    75% {
+        d: path('M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z')
+    }
+
+    100% {
+        d: path('M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z')
+    }
+}
