@@ -43,8 +43,8 @@ export const getInfoInput = {
         placeholder: 'Ingresa tu texto...'
     },
     [Actions.USE]: {
-        label: 'Introduce un verbo',
-        placeholder: 'Ingresar verbo...'
+        label: 'Introduce un verbo, prepocición, artículo, conjunción o adverbio',
+        placeholder: 'Ingresar verbo, prepocición, artículo, conjunción o adverbio...'
     },
     default: {
         label: "",
