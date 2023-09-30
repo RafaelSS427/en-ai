@@ -23,10 +23,10 @@ export const getInstructions = (option: Actions) => {
 }
 
 export const getPrompt = (value: string) => ({
-    [Actions.TIMES]: `¿Podrías proporcionarme la forma base, pasado y participio del verbo "${value}"?. Verifica que se trate de un verbo en inglés.`,
+    [Actions.TIMES]: `Proporciona la forma base, pasado y participio del verbo "${value}" únicamente si se trata de un verbo en inglés.`,
     [Actions.TYPE]: `¿El verbo "${value}" es irregular o regular?. Verifica que se trate de un verbo en inglés.`,
-    [Actions.CHECK]: `¿Podrías revisar si existe algún error gramátical en el texto que te pasaré a continuación? Text: "${value}". Verifica que se trate de un texto en inglés.`,
-    [Actions.USE]: `¿Podrías proporcionarme una descripción corta y 3 ejemplos de uso para este verbo "${value}"? Verifica que se trate de un verbo en inglés.`,
+    [Actions.CHECK]: `¿El texto "${value}" tiene algún error gramatical en inglés?`,
+    [Actions.USE]: `Proporciona una descripción corta y 3 ejemplos de uso para este término en inglés "${value}". Verifica que "${value}" se trate de un término en inglés.`,
 })
 
 export const getInfoInput = {

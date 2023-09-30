@@ -58,11 +58,17 @@ export const Hero = () => {
                 {message}
 
                 {
-                  !isWriting && router.query.select !== Actions.CHECK && (
+                  !isWriting && (router.query.select !== Actions.CHECK && router.query.select !== Actions.USE) && (
                     <>
-                      <br />
-                      <br />
-                      <Link className="text-sm" href={`https://www.wordreference.com/conj/enverbs.aspx?v=${inputText.toLocaleLowerCase()}`} isExternal showAnchorIcon underline="always">Más información</Link>
+                      {
+                        !message.includes("no puedo") && (
+                          <>
+                            <br />
+                            <br />
+                            <Link className="text-sm" href={`https://www.wordreference.com/conj/enverbs.aspx?v=${inputText.toLocaleLowerCase()}`} isExternal showAnchorIcon underline="always">Más información</Link>
+                          </>
+                        )
+                      }
                     </>
                   )
                 }

@@ -10,8 +10,8 @@ ${basePropmtSystem}
  - Forma base: <verb>
  - Pasado: <verb>
  - Participio: <verb>
-2. No añadas texto adicional; tu única respuesta será el texto mencionado en la regla 1.
-3. En caso de que no puedas realizar la regla 1 o 0 como respuesta; responde con "Lo siento, no puedo entenderte"
+3. No añadas texto adicional; tu única respuesta será el texto mencionado en la regla 1.
+4. Si no puedas determinar que se trata de un verbo del idioma inglés; responde con "Lo siento, no puedo entenderte"
 `;
 
 const propmtSystemType = `
@@ -27,23 +27,22 @@ ${basePropmtSystem}
 const propmtSystemCheck = `
 ${basePropmtSystem}
 1. En caso de que no existan errores gramáticales; tu respuesta debe tener este formato sin agregar más texto:
- "¡Todo está bien!"
-2. En caso de que existan errores gramáticales; tu respuesta debe tener este formato sin agregar texto de más:
- El texto no es correcto
-3. Recuerda que es importante agregar la corrección del texto en tu respuesta en caso de que existan errores gramáticales.
-4. No agregues texto adicional.
+ ¡Todo está bien!
+2. En caso de que existan errores gramáticales; tu respuesta debe tener este formato sin agregar más texto:
+ El texto no es correcto.
+3. Agrega la corrección.
 `;
 
 const propmtSystemUse = `
 ${basePropmtSystem}
-1. Los ejemplos son oraciones básicas donde se hace uso del verbo. No traduzcas los ejemplos ni agregues sublistas.
-2. Tu respuesta debe tener este formato, asegurate que la descripción del verbo esté en español y los ejemplos en inglés:
-<descripción del verbo>
- 1. <Ejemplo de uso 1>
- 2. <Ejemplo de uso 2>
- 3. <Ejemplo de uso 3>
-3. En caso de que no puedas realizar la regla 4 como respuesta; responde con "Lo siento, no puedo entenderte".
-4. No añadas texto adicional; cumple con el formato de respuesta mencionado en la regla 2 sin agregar texto de más.
+1. Los ejemplos son oraciones básicas donde se hace uso del término. No agregues sublistas ni trates los verbos como sustantivos.
+2. Tu respuesta debe tener este formato:
+Descripción en español
+ 1. <Oración 1 en inglés>(<Oración 1 en español>)
+ 2. <Oración 2 en inglés>(<Oración 2 en español>)
+ 3. <Oración 3 en inglés>(<Oración 3 en español>)
+3. En caso de que no puedas realizar la regla 2 como respuesta; responde con "Lo siento, no puedo entenderte".
+4. No es necesario que agregues a tu respuesta texto como: "Descripción en español" o "Descripción" ya que se sobreentiende que se trata de una descripción.
 `;
 
 export {

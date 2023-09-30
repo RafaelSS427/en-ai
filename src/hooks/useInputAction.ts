@@ -51,7 +51,7 @@ export const useInputAction = ({ isRegenerate = false }:Props) => {
                     },
                     {
                         role: "user",
-                        content: `${getPrompt( isRegenerate ? router.query.q?.toString() || inputText.trim() : inputText.trim())[select]}`
+                        content: `${getPrompt( isRegenerate ? router.query.q?.toString() || inputText.trim() : inputText.trim())[ isRegenerate ? router.query.select?.toString() as Actions || select : select]}`
                     }
                 ],
                 stream: true,
