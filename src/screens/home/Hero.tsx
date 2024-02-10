@@ -8,12 +8,6 @@ import { useInputAction } from '@/hooks'
 import { useRouter } from 'next/router'
 import { Actions } from '@/lib'
 
-/* { Pending
-  !isWriting && select !== Actions.CHECK && (
-    <Link className="text-sm" href={`https://www.wordreference.com/conj/enverbs.aspx?v=${inputText.toLocaleLowerCase()}`} isExternal showAnchorIcon underline="always">Más información</Link>
-  )
-} */
-
 export const Hero = () => {
   const { message, isWriting } = useStore()
   const { handleAction } = useInputAction({ isRegenerate: true })
